@@ -15,13 +15,13 @@ title:  UNI Math 3630/5630 <br class="visible-xs" /><i>Differential Geometry</i>
 </div>
 
 <div class="row">
-  <div class="col-sm-4 visible-sm">
+  <div class="col-sm-4 hidden-xs">
   </div>
   <div class="col-xs-12 sm-4">
     For now, This is just a place holder page. I'll get things updated soon!
   </div>
   <div class="col-sm-4 visible-sm">
   </div>
-<div class="row visible-xs visible-sm">
+<div class="row visible-xs hidden-xs">
   <p><br /></p>
 </div>
