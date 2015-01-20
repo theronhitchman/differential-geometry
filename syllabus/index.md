@@ -15,7 +15,10 @@ surfaces in space using tools from calculus and linear algebra.
 We will run class as an [Inquiry Based Learning][IBL] (IBL) environment, with
 student presentations of their own work at the center of our daily routine.
 
-Successful students will
+Successful students will (1) learn to compute geometric quantities using multivariable
+calculus, (2) learn to connect those quantities with geometric features of curves and
+surfaces, and (3) complete a project or two while exploring more advanced geometry
+of curves and surfaces.
 
 
 
@@ -30,7 +33,7 @@ Successful students will
   <strong>email:</strong> theron.hitchman@uni.edu<br>
   <strong>office phone:</strong> 319-273-2646
   </address>
-- Course Web Page: <code>http://theronhitchman.github.io/euclidean-geometry</code>
+- Course Web Page: <code>http://theronhitchman.github.io/differential-geometry</code>
 
   Check this regularly. Lots of important things are at this page.
 
@@ -39,7 +42,7 @@ Successful students will
 - Texts:
     * Course pack
     * Struik
-- Software: Sage
+- Software: Sage (use this through the SageMathCloud for free at <code>https://cloud.sagemath.com</code>)
 
 
 ## Assessment:
@@ -57,11 +60,15 @@ on the following assessments:
 
 If you feel uncertain about your progress in the course at any time, please contact me.
 
-## Dates to Observe:
+## Dates to Observe: (These are tentative)
 
-- List
-- Coming
-- Soon
+- Feb 6: First Project proposal due
+- Feb 13: exam on basic curve computations
+- March 6: exam on basic surface computations
+- March 13: First Project Due
+- March 27: Second Project proposal due
+- April 3: exam on advanced surface computations
+- May 4-8: Final Exam Week -- we'll have a project presentation day!
 
 ---
 
