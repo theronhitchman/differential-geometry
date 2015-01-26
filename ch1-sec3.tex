@@ -1,0 +1,163 @@
+\documentclass[Shifrin_Solutions_Spring_2015]{subfiles}
+\begin{document}
+
+
+\section{Some Global Results}
+
+\begin{exercise}
+\begin{itemize}
+\item[a.] Prove that the shortest path between two points on the unit sphere is the arc of a great circle connecting them.
+\item[b.] Prove that if $P$ and $Q$ are points on the unit sphere, then the shortest path between them has length $\arccos(P\cdot Q)$.
+\end{itemize}
+\end{exercise}
+
+
+\begin{proof}[Solution] Without loss of generality, by using rotations of the sphere, we may assume that $P$ be the north pole $(0,0,1)$ and $Q = (\sin u_0, 0 , \cos u_0)$. Now suppose that
+\[
+\alpha(t) = \left( \sin u(t) \cos v(t) , \sin u(t) \sin v(t) , \cos u(t) \right)
+\]
+is a differentiable curve joining $P$ to $Q$. Then $u(a)  = 0, u(b)=u_0, v(a)=v(b) =0$. We compute that
+\[
+||\alpha'(t)||^2 = \sin^2 u(t) (v'(t))^2 + (u'(t))^2 .
+\]
+Since $(v')^2\geq 0$, we deduce that $||\alpha'(t)|| \geq |u'(t)|$ for all $t$. This means that the curve can only get shorter by projecting it onto the great circle from $P$ down to $Q$. Therefore, the great circle must be the shortest path.
+
+The arc of the great circle is parametrized by choosing $v=0$, $u(t) = t$ for $0 \leq t \leq u_0$. That is, the curve is
+\[
+\beta(t) = \left(\sin t, 0 \cos t \right),
+\]
+which has length
+\[
+\mathrm{length}(\beta) = \int_0^{u_0} \, dt = u_0 = \arccos(P\cdot Q).
+\]
+Since this expression on the right is invariant under rotations of the sphere, it is a valid way to measure the distance between any two points on the sphere.
+\end{proof}
+
+\begin{exercise} Give a closed plane curve $C$ with $\kappa>0$ that is not convex.
+\end{exercise}
+
+\begin{proof}[Solution] We consider the cardioid which is given as a polar coordinate curve $r = 1-2\cos \theta$.\\
+
+
+Because it is useful to have, we first develop some computations for smooth plane curves.  Let $\alpha = (x,y)$ be our plane curve. Then the speed of $\alpha$ is $\upsilon = \sqrt{x'^2 +y'^2}$, and  the tangent and normal vectors are
+\[
+T  = \dfrac{1}{\upsilon}\left( x', y' \right) , \quad\mbox{and} \quad N = \dfrac{1}{\upsilon}\left(-y', x'\right).
+\]
+Next, we compute the curvature. Of course, by the chain rule,
+\[
+T' = \dfrac{dT}{ds}\dfrac{ds}{dt} = \kappa \upsilon N = \kappa \left( -y', x'\right) .
+\]
+Since
+\[
+T' = \dfrac{1}{\upsilon^2} \left( \upsilon x'' - x' \upsilon' , \upsilon y'' - y'\upsilon' \right),
+\]
+provided that $y' \neq 0$, the curvature must be given by the expression
+\[
+\kappa = -  \dfrac{\upsilon x'' - x' \upsilon'}{y'\upsilon^2} = \dots =\dfrac{x'y'' - y'x''}{\upsilon^3} .
+\]
+This is convenient. Since $\upsilon>0$, to check the sign of the curvature, we only need to check the sign of $x'y'' - y'x''$.\\
+
+Now, let us return to our cardiod. It is not difficult to check that the line $x=-1$ is tangent to the curve, but the curve has points on both sides of this line, hence the cardioid is not convex. Also, if we convert the cardioid to rectangular coordinates, we have
+\begin{align*}
+x &= \cos \theta - 2\cos^2\theta \\
+y& = \sin\theta - \sin(2\theta)
+\end{align*}
+so it is now a direct computation that the curvature has the same sign as
+\[
+x'y''-y'x''  = 9-6\cos\theta
+\]
+which is positive.
+\end{proof}
+
+
+\begin{exercise} Draw closed plane curves with rotation indices $0, -2, 2$, and $3$, respectively.
+\end{exercise}
+
+\begin{proof}[Solution]
+\todo[inline]{Add pictures of curves}
+\end{proof}
+
+
+\begin{exercise} Suppose that $C$ is a simple closed plane curve with $0 < \kappa \leq c$. Prove that $\mathrm{length}(C) \geq 2\pi / c$.
+\end{exercise}
+
+\begin{proof}[Solution] Since the curvature is positive, by Theorem 3.5 (Hopf's Umlaufsatz), we have
+\[
+\begin{split}
+2\pi/c = \dfrac{1}{c}\int_{C} \kappa \, ds \leq \dfrac{1}{c} \int_{C} c\, ds = \dfrac{c}{c}\mathrm{length}{C}=\mathrm{length}{C}.
+\end{split}
+\]
+\end{proof}
+
+
+\begin{exercise} Give an alternative proof of the latter part of Theorem 3.1 by considering instead the function
+\[
+f(s) = ||\tilde{T}(s) - T^*(s)||^2 + ||\tilde{N}(s) - N^*(s)||^2 + ||\tilde{B}(s) - B^*(s)||^2 .
+\]
+\end{exercise}
+
+\begin{exercise} Generalize Theorem 3.5 to prove that if $C$ is a \emph{piecewise-smooth} plane curve with exterior angles $\epsilon_j$, $j=1,\ldots, s$, then $\int_{C} \kappa \, ds + \sum_{j=1}^s \epsilon_j = \pm 2\pi$.
+\end{exercise}
+
+\begin{exercise}
+Prove that if $C$ is a simple closed (convex) plane curve of constant breadth $\mu$, then $\mathrm{length}(C) = \mu\pi$.
+\end{exercise}
+
+\begin{exercise} A convex plane curve with the origin in its interior can be determined by its tangent lines $\cos(\theta)x + \sin(\theta)y = p(\theta)$, called its \emph{support lines}. If we have polar coordinates $(r,\theta)$ on the plane, here $p(\theta)$ is the perpendicular distance from the origin to the support line along the ray of angle $\theta$. The function $p(\theta)$ is called the \emph{support function}.
+\begin{itemize}
+\item[a.] Prove that the line given above is tangent to the curve at the point
+\[
+\alpha(\theta) = \left( p(\theta) \cos\theta - p'(\theta) \sin \theta , p(\theta) \sin \theta + p'(\theta) \cos \theta \right) .
+\]
+
+\item[b.] Prove that the curvature of the curve at $\alpha(\theta)$ is $1/(p(\theta) + p'(\theta) )$.
+
+\item[c.] Prove that the length of $\alpha$ is given by $L = \int_0^{2\pi} p(\theta) \, d\theta $.
+
+\item[d.] Prove that the area enclosed by $\alpha$ is given by $A= \dfrac{1}{2} \int_0^{2\pi} (p(\theta)^2 - p'(\theta)^2 )\, d\theta$.
+
+\item[e.] Use the answer to part c to reprove the result of Exercise 7.
+\end{itemize}
+\end{exercise}
+
+\begin{proof}[Solution]
+
+
+
+
+\end{proof}
+
+
+\begin{exercise}
+Let $C$ be a $\mathcal{C}^2$ closed space curve, say parametrized by arclength by $\alpha: [0,L] \rightarrow \mathbb{R}^3$. ...
+
+\end{exercise}
+
+\begin{exercise}
+Under what circumstances does a closed space curve have a parallel that is also closed?
+\end{exercise}
+
+\begin{exercise}
+Suppose that $\alpha$ is an arclength-parametrized $\mathcal{C}^2$ curve. Suppose that we have $\mathcal{C}^1$ unit vector fields $N_1$ and $N_2 = T\times N_1$ along $\alpha$ so that
+\[
+T\cdot N_1 = T\cdot N_2 = N_1 \cdot N_2 = 0 ;
+\]
+i.e., $T, N_1, N_2$ will be a smoothly varying right-handed orthonormal frame as we move along the curve. But now we want to impose the extra condition that $N_1'\cdot N_2 = 0$. We say the unit normal vector field $N_1$ is \emph{parallel} along $\alpha$; this means that the only change of $N_1$ is in the direction of $T$. In this event $T, N_1, N_2$ is called a \emph{Bishop frame} for $\alpha$.
+\begin{itemize}
+\item[a.]
+\item[b.]
+\item[c.]
+\item[d.]
+\item[e.]
+\end{itemize}
+\end{exercise}
+
+\begin{exercise}
+Prove Proposition 3.2 as follows. Let ...
+
+\end{exercise}
+
+\begin{exercise} Complete the details of the proof of the indicated step in the proof of Theorem 3.5, as follows. ...
+\end{exercise}
+
+\end{document}

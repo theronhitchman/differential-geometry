@@ -1,0 +1,133 @@
+\documentclass[Shifrin_Solutions_Spring_2015]{subfiles}
+\begin{document}
+
+
+
+\section{Calculus Review}
+
+\begin{exercise}
+Suppose that $f:(a,b) \rightarrow \mathbb{R}^n$ is a $\mathcal{C}^1$ function and nowhere zero. Prove that $f / ||f|| $ is constant if and only if $f'(t) = \lambda(t) f(t)$ for some continuous scalar function $\lambda$.
+\end{exercise}
+
+\begin{proof}[Solution]
+Let $g(t) = f(t) / ||f(t)||$ be the normalization of $f(t)$. We compute that
+\[
+g'(t) = \dfrac{d}{dt} \left( \dfrac{f(t)}{ ( f(t) \cdot f(t) )^{1/2} }\right) = \dfrac{(f(t)\cdot f(t) ) f'(t) - f(t) ( f'(t) \cdot f(t) )}{||f(t)||^{3/2}} .
+\]
+So, $g$ will be constant if and only if $g' \equiv 0$, which is true if and only if the numerator vanishes identically.
+
+First, suppose that $f'(t) =\lambda(t) f(t)$. Then a simple substitution shows that the numerator of $g'$ is
+\[
+(f(t)\cdot f(t) ) \lambda(t)f(t) - f(t) ( (\lambda(t)f(t)) \cdot f(t) ) = 0.
+\]
+Hence $g$ is constant.
+
+Now suppose that $g$ is constant. Then for every $t$ we have
+\[
+f'(t) (f(t)\cdot f(t) ) =  f(t) (f'(t) \cdot f(t) ) .
+\]
+That is, we must have exactly
+\[
+f'(t) = \lambda(t) f(t) , \text{ where } \lambda(t) = \dfrac{f'(t)\cdot f(t)}{f(t)\cdot f(t)} .
+\]
+\end{proof}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}
+Suppose that $\alpha: (a,b) \rightarrow \mathbb{R}^3$ is twice-differentiable and $\lambda$ is a nowhere-zero, twice-differentiable scalar function. Prove that $\alpha, \alpha'$, and $\alpha''$ are everywhere linearly independent if and only if $\lambda\alpha$, $(\lambda \alpha)'$ and $(\lambda \alpha)''$ are everywhere linearly independent.
+\end{exercise}
+
+\begin{proof}[Solution]
+We use the fact that the determinant of a matrix is non-zero if and only if the rows are linearly independent, and that the determinant is unchanged if you add a multiple of one row to another row.
+So, we compute that $(\lambda \alpha) ' = \lambda' \alpha  + \lambda \alpha'$ and $(\lambda\alpha)'' = \lambda'' \alpha + 2\lambda'\alpha' + \lambda\alpha''$. Hence, if we write our vectors of interest as rows of a square matrix, we have
+\[
+\begin{split}
+\det \begin{pmatrix} \lambda \alpha \\ (\lambda\alpha)' \\ (\lambda\alpha)'' \end{pmatrix} & =  \det \begin{pmatrix} \lambda\alpha \\ \lambda' \alpha  + \lambda \alpha' \\ \lambda'' \alpha + 2\lambda'\alpha' + \lambda\alpha''\end{pmatrix} \\
+& = \det \begin{pmatrix} \lambda \alpha \\ \lambda \alpha' \\ \lambda \alpha'' \end{pmatrix}
+ = \lambda^3 \det \begin{pmatrix} \alpha \\ \alpha' \\ \alpha''\end{pmatrix}
+\end{split}
+\]
+Since $\lambda \neq 0$, we see that the first determinant is non-zero exactly when the last one is. This gives the result.
+\end{proof}
+
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercise}
+Let $f, g: \mathbb{R} \rightarrow \mathbb{R}^2$ be $\mathcal{C}^1$ vector functions. Suppose
+\begin{align*}
+f'(t) &= a(t) f(t) + b(t)g(t) \\
+g'(t) &= c(t)f(t) - a(t)g(t) \\
+\end{align*}
+for some continous functions $a, b$, and $c$. Prove that the parallelogram spanned by $f(t)$ and $g(t)$ lies in a fixed plane and has constant area.
+\end{exercise}
+
+\begin{proof}[Solution]
+For each value of $t$, the vector $f(t) \times g(t)$ is a normal to the plane spanned by $f(t)$ and $g(t)$, and its length $||f(t) \times g(t)||$ is the area of the parallelogram in question. Since
+\[
+||f \times g||' = \dfrac{(f\times g)' \cdot (f\times g)}{||f\times g||} ,
+\]
+We see that to get a full solution, it suffices to show that $(f\times g)'$ has derivative zero. (Then the plane doesn't move and the area stays constant, too!) But this can be achieved by a simple computation:
+\[
+\begin{split}
+(f(t)\times g(t) )' & = f'(t) \times g(t) + f(t) \times g'(t) \\
+& = (af + bg ) \times g + f \times (c f - a g) \\
+& = a ( f\times g) + 0 + 0 - a ( f\times g) = 0.
+\end{split}
+\]
+
+\end{proof}
+
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercise}
+Prove that for any continous vector-valued function $f:[a,b]\rightarrow \mathbb{R}^3$, we have
+\[
+\left|\left| \int_a^b f(t) \, dt \right| \right| \leq \int_a^b ||f(t)||\, dt\, .
+\]
+\end{exercise}
+
+\begin{proof}[Solution]
+Let $v = \int_a^b f(t)\, dt$. Note that this is a vector! Also, the norm of $v$ is the left-hand expression. Now, by linearity of integration and the Cauchy-Schwarz inequality used \emph{pointwise},
+\[
+||v||^2 = v \cdot \int_a^b f(t)\, dt = \int_a^b v\cdot f(t) \, dt \leq \int_a^b ||v|| ||f(t)|| \, dt = ||v|| \int_a^b ||f(t)|| \, dt .
+\]
+Finally, we simply divide by $||v||$ to obtain the result.
+
+\end{proof}
+
+\vspace{1cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercise} Let $R\subset \mathbb{R}^2$ be a region. Prove that
+\[
+\text{area}(R) = \int_{\partial R} u\, dv = -\int_{\partial R} v\, du = \int_{\partial R} -v\, du + u\, dv\, .
+\]
+\end{exercise}
+
+\begin{proof}[Solution]
+This is a fairly direct application of Green's Theorem. Since $\text{area}(R) = \int_R 1\, dudv$, we need only choose pairs of functions $P$ and $Q$ such that
+$\dfrac{\partial Q}{\partial u} - \dfrac{\partial P}{\partial v} = 1$ and the path integrals work out to the given ones.
+For the three possible path integrals, use
+\begin{itemize}
+
+\item $Q = u$ and $P = 0$,
+
+\item $Q=0$ and $P = -v$,
+
+\item $Q = u/2$ and $P = -v/2$.
+\end{itemize}
+
+
+\end{proof}
+
+\end{document}

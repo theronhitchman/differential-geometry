@@ -1,0 +1,524 @@
+%%		Solutions to Shifrin's Differential Geometry
+%%		Chapter One: Curves , Section One: Examples
+\documentclass[Shifrin_Solutions_Spring_2015]{subfiles}
+\begin{document}
+
+
+\section{Examples, Arclength Parametrization}
+
+\begin{exercise}
+Parametrize the unit circle (less the point $(-1,0)$)  by the signed length $t$ of the vertical line segment joining the origin to the chord from $(-1,0)$ to the point on the circle.
+\end{exercise}
+
+\begin{proof}[Solution]
+Note that $t \in (-\infty, \infty)$. Let $P = (-1,0)$ and $Q = (0,t)$. Then the line $PQ$ is given by the equation
+\[
+\begin{split}
+y-t &= t ( x - 0) \\
+ y & = t ( x-1).
+\end{split}
+\]
+This line meets the circle $x^2  + y^2 = 1$ at a point which is a simultaneous solution of the two equations\dots So we substitute the first into the second:
+\[
+1 = x^2 + y^2 = x^2 + [t(x+1)]^2 = x^2 + t^2x^2 + 2t^2x + t^2
+\]
+We rearrange this into a quadratic equation in $x$ whose coefficients depend upon $t$,
+\[
+(1+t^2) x^2 + (2t^2) x + (t^2 - 1) = 0,
+\]
+and use the quadratic formula to find the roots. After some simplifying, we obtain
+\[
+x = \dfrac{-t^2 \pm \sqrt{1}}{1+t^2}.
+\]
+Choosing the negative branch of the square root leads to $x=-1$, which means that we get the point $P$. So to find $Q$, we choose the positive branch of the square root and obtain
+\[
+x = \dfrac{1-t^2}{1+t^2}.
+\]
+We go back to the equation of the circle to find the expression for $y$, which becomes
+\[
+y =\pm \dfrac{ 2|t|}{1+t^2}.
+\]
+It is clear from our diagram that $y$ and $t$ have the same sign, so our final parametrization is
+\[
+x = \dfrac{1-t^2}{1+t^2}, \qquad y = \dfrac{ 2t}{1+t^2}, \quad \mbox{ for } t \in (-\infty, \infty) .
+\]
+\end{proof}
+
+%\vspace{.5cm}
+\vfill
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercise}
+Consider the helix $\alpha(t) = ( a \cos t , a \sin t , b t )$. Calculate $\alpha'(t)$,
+$||\alpha'(t)||$ and reparametrize $\alpha$ by arclength.
+\end{exercise}
+
+\begin{proof}[Solution] We compute directly
+\[
+\alpha'(t) = ( - a \sin t, a \cos t , b)
+\]
+\[
+||\alpha'(t)|| = [ (-a\sin t)^2 + (a \cos t)^2 + b^2]^{1/2} = [a^2+b^2]^{1/2}
+\]
+So $\alpha$ has constant speed. This makes reparametrizing a snap. We use the function
+\[
+t = h(s) = \dfrac{s}{\sqrt{a^2 + b^2 \ }}.
+\]
+Now $\beta(s) = \alpha \circ h(s) = \alpha(h(s))$ has $||\beta'(s)|| = ||\alpha'(t)||\cdot |h'(s)| = 1$.
+We conclude that an arclength reparametrization of the curve is
+\[
+\beta(s) = \left( a \cos \left(\dfrac{s}{\sqrt{a^2 + b^2 \ }}\right) , a \sin\left( \dfrac{s}{\sqrt{a^2 + b^2 \ }}\right) , \dfrac{b \cdot s}{\sqrt{a^2 + b^2 \ }} \right).
+\]
+\end{proof}
+
+\begin{figure}[h]
+\centering
+\subfloat[Exercise 1.1.2: A Helix with $a=7$, $b=3$]{\includegraphics[width=0.48\textwidth]{picturebook/ch1sec1/ex1-1-2}}
+  \subfloat[Exercise 1.1.3: A Circle]{\includegraphics[width=0.48\textwidth]{picturebook/ch1sec1/ex1-1-3}}
+  \caption{The Curves from Exercises 1.1.2 and 1.1.3}
+\end{figure}
+
+
+%\vspace{.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise} Let
+$\alpha (t) = \left( \dfrac{1}{\sqrt{3}} \cos t + \dfrac{1}{\sqrt{2}}\sin t , \dfrac{1}{\sqrt{3}}\cos t , \dfrac{1}{\sqrt{3}}\cos t - \dfrac{1}{\sqrt{2}}\sin t \right)$.
+Calculate $\alpha'(t)$, $|| \alpha'(t)||$, and reparametrize $\alpha$ by arclength.
+\end{exercise}
+
+\begin{proof}[Solution]
+We compute
+\[
+\alpha'(t) = \left(  -\dfrac{1}{\sqrt{3}}\sin t + \dfrac{1}{\sqrt{2}}\cos t ,
+- \dfrac{1}{\sqrt{3}} \sin t ,
+-\dfrac{1}{\sqrt{3}}\sin t - \dfrac{1}{\sqrt{2}}\cos t
+\right) .
+\]
+So then
+\[
+||\alpha'(t)||^2 = \left( -\dfrac{1}{\sqrt{3}}\sin t + \dfrac{1}{\sqrt{2}}\cos t \right)^2 + \left( - \dfrac{1}{\sqrt{3}} \sin t \right)^2 + \left( -\dfrac{1}{\sqrt{3}}\sin t - \dfrac{1}{\sqrt{2}}\cos t \right)^2 = 1 .
+\]
+So we see that $\alpha$ is already a unit speed curve, and no reparametrization is necessary.
+\end{proof}
+
+%\vspace{.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}
+Parametrize the graph $y=f(x)$, $a\leq x \leq b$, and show that its arclength is given by the traditional formula
+\[
+\mbox{length} = \int_a^b \sqrt{1+(f'(x))^2\,}\, dx .
+\]
+\end{exercise}
+
+\begin{proof}[Solution]
+We parametrize the graph by
+\[
+x = t, \quad y = f(t), \quad a \leq t \leq b .
+\]
+That is,
+\[
+\alpha(t) = \left( t, f(t) \right).
+\]
+Then
+\[
+\alpha'(t) = \left( 1, f'(t) \right), \mbox{ and } ||\alpha'(t)|| = \sqrt{1 + (f'(t))^2\,} .
+\]
+So the claim follows directly from the definition of arclength.
+\end{proof}
+
+%\vfill
+%\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}{$\ $}
+\begin{itemize}
+\item[a.] Show that the arclength of the catenary $\alpha(t) = (t, \cosh t)$ for $0\leq t\leq b$ is $\sinh b$.
+
+\item[b.] Reparametrize the catenary by arclength.
+\end{itemize}
+\end{exercise}
+
+\begin{proof}[Solution]
+We compute the arclength directly using the Fundamental Theorem of Calculus as
+\[
+\text{length} = \int_0^b \sqrt{1 + \sinh^2 t } \, dt = \int_0^b \cosh t \, dt = \sinh b .
+\]
+So, now we must invert the function $s = \sinh t = \dfrac{1}{2} \left( e^t - e^{-t}\right)$. We first massage it into a form which is reminiscent of a quadratic polynomial
+\begin{align*}
+2s & = e^t - e^{-t} \\
+2se^t &= e^{2t} - 1 \\
+(e^t)^2  - 2 s& (e^t) - 1 = 0
+\end{align*}
+Then, we use the quadratic formula to deduce that
+\[
+e^t  = \dfrac{2s \pm \sqrt{4s^2 - 4(1)(-1)} }{2(1)} = s \pm \sqrt{s^2+1} .
+\]
+We choose the positive branch to fit our situation, and then invert the exponential.
+\[ t = h(s) = \ln(  s + \sqrt{s^2+1} ) . \]
+So, after some computation, we see that the reparametrization of $\alpha$ by arclength is the curve
+\[
+\beta(s) = \alpha\circ h(s) = \left(  s + \sqrt{s^2+1}\, , \,
+\dfrac{s^2+1 + s\sqrt{s^2+1 } }{ s + \sqrt{s^2+1 } }\, \right).
+\]
+\end{proof}
+
+\begin{figure}[h]
+\centering
+\subfloat[Ex 5: The Catenary]{\includegraphics[width=0.3\textwidth]{picturebook/ch1sec1/ex1-1-5}}
+ \subfloat[Ex 6: Generalized Helix]{\includegraphics[width=0.3\textwidth]{picturebook/ch1sec1/ex1-1-6-1}}
+ \subfloat[Ex 6: Another View]{\includegraphics[width=0.3\textwidth]{picturebook/ch1sec1/ex1-1-6-2}}
+  \caption{Figures for Exercises 1.1.5 and 1.1.6}
+\end{figure}
+
+
+%\vspace{.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}
+Consider the curve $\alpha(t) = \left( e^t , e^{-t} , \sqrt{2\,} t \right)$. Calculate $\alpha'(t)$, $||\alpha'(t)||$ , and reparametrize $\alpha$ by arclength, starting at $t=0$.
+\end{exercise}
+
+\begin{proof}[Solution]
+First we do the computations.
+\begin{align*}
+\alpha'(t) & = \left( e^t , -e^{-t} , \sqrt{2} \right) , \\
+||\alpha'(t) || & =\sqrt{ e^{2t} + e^{-2t} + 2} \\
+& = \sqrt{( e^t + e^{-t}  )^2} \\
+& = e^t + e^{-t}
+\end{align*}
+Thus,
+\[
+s = \int_0^t (e^u + e^{-u} ) \, du = \int_0^t 2\cosh u \, du = 2 \sinh t.
+\]
+Using a little of what we did in the last exercise, we see that
+\[
+t = h(s) = \ln\left( \dfrac{s}{2} + \sqrt{\left(\dfrac{s}{2}\right)^2 + 1 } \right)
+\]
+is our ``time change'' function, and our reparametrized curve is
+\[
+\beta(s) = \alpha\circ h(s) = \left(
+ \dfrac{s}{2} + \sqrt{\left(\dfrac{s}{2}\right)^2 + 1 } \, ,
+\left( \dfrac{s}{2} + \sqrt{\left(\dfrac{s}{2}\right)^2 + 1 }\right)^{-1} \, ,
+\sqrt{2}\ln\left(\dfrac{s}{2} + \sqrt{ \left(\dfrac{s}{2}\right)^2+1 } \right) \right) .
+\]
+
+Note that the middle coordinate is
+\[
+\left(\dfrac{s}{2} + \sqrt{\left(\dfrac{s}{2}\right)^2 + 1 }\right)^{-1} =  - \dfrac{s}{2} + \sqrt{\left(\dfrac{s}{2}\right)^2 + 1\, }  .
+\]
+
+\end{proof}
+
+\vspace{.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}
+Find the arclength of the tractrix starting at $(0,1)$ and proceeding to an arbitrary point.
+\end{exercise}
+
+\begin{proof}[Solution]
+Our curve is
+\[
+\alpha(\theta) = \left( \cos \theta + \ln \tan( \theta/2 )\, , \sin\theta \right) , \qquad \pi/2 \leq \theta < \pi .
+\]
+We compute in the standard way.
+\[
+\alpha'(\theta) = \left( -\sin\theta + \dfrac{\sec^2(\theta/2)}{2\tan(\theta/2)}\, , \cos\theta \right) .
+\]
+So, after a massive simplification,
+\[
+\begin{split}
+||\alpha'(t) ||  & = \sqrt{  \sin^2\theta + -\dfrac{\sec^2(\theta/2)\sin(\theta)}{\tan(\theta/2)} + \dfrac{1}{4}\dfrac{\sec^4(\theta/2)}{\tan^2(\theta/2)} + \cos^2\theta   } \\
+& = \ldots \\
+& =   \dfrac{\cos \theta}{\sin\theta}
+\end{split}
+\]
+Now we can compute the arclength:
+\[
+\text{length} = \int_{\pi/2}^{\theta} \dfrac{\cos u}{\sin u} \, du = \ln \sin u .
+\]
+\end{proof}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.5\textwidth]{picturebook/ch1sec1/ex1-1-7}
+\caption{Exercise 1.1.7: The Tractrix}
+\end{figure}
+
+%\todo[inline]{add figure of tractrix}
+%\vspace{.5cm}
+
+%\vfill
+%\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}
+Let $P, Q \in \mathbb{R}^3$ and let $\alpha: [a,b] \rightarrow \mathbb{R}^3$ be any parametrized curve with $\alpha(a) = P$ and $\alpha(b) = Q$. Let $v= Q-P$. Prove that $\text{length}(\alpha) \geq ||v||$, so that the line segment from $P$ to $Q$ gives the shortest possible path.
+\end{exercise}
+
+\begin{proof}[Solution]
+Note that
+\[
+\dfrac{d}{dt}\left( \alpha(t)\cdot v \right) = \alpha'(t)\cdot v ,
+\]
+so by the Fundamental Theorem of Calculus,
+\[
+\begin{split}
+||v||^2 & = v \cdot v  =  \alpha(b)\cdot v - \alpha(a) \cdot v  \\
+	& =  \int_a^b \dfrac{d}{dt}\left( \alpha(t)\cdot v \right) \, dt    = \int_a^b \alpha'(t)\cdot v \, dt \\
+	& \leq \int_a^b ||\alpha'(t)|| \, ||v||\, dt = ||v|| \int_a^b ||\alpha'(t)||\, dt
+\end{split}
+\]
+Now we divide through by $||v||$ to get the result.
+\end{proof}
+
+\vspace{.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}
+Consider a uniform cable with density $\delta$ hanging in equilibrium. The tension forces $T(x + \Delta x)$, $-T(x)$, and the weight of the piece of cable lying over $[x,x+\Delta x]$ all balance. If the bottom of the cable is at $x=0$, $T_0$ is the magnitude of the tension there, and the cable is the graph $y=f(x)$, show that $f''(x) = \dfrac{g\delta}{T_0}\sqrt{1 + f'(x)^2}$.  Letting $C = T_0/g\delta$, show that $f(x) = C\cosh(x/C) + C_0$ for some constant $C_0$.
+\end{exercise}
+
+\begin{proof}[Solution]
+A piece of the cable \emph{which starts at the bottom} is in equilibrium. We use Newton's principle of balancing forces on the section of curve lying over an interval $[0,x]$.
+In the horizontal direction, we derive the equation
+\[
+-T_0 + ||T(x)||\cos\theta = 0 ,
+\]
+where $\theta$ is the angle the tangent vector to the curve at $x$ makes with the positive $x$-direction.
+In the vertical direction, we get the equation
+\[
+||T(x)|| \sin\theta   - g\delta \int_0^x \, ds = 0 .
+\]
+We combine these equations to see
+\[
+T_0  \tan\theta  = g \delta \int_0^x \, ds .
+\]
+Now, $\tan\theta$ is the slope of the tangent line, so it is equal to $f'(x)$, and $\int_0^x \, ds$ is the arclength from $0$ to $x$, so we deduce
+\[
+T_0 f'(x) = g \delta \int_0^x \sqrt{ 1 + f'(u)^2\, } du .
+\]
+Now, we differentiate this equation to find
+\[
+T_0 f''(x) = g \delta \sqrt{1+ f'(x)^2 }.
+\]
+This is a differential equation of second order. We solve it in two simple steps. First let $u = f'(x)$, then our equation is
+\[
+C\dfrac{du/dx}{\sqrt{1+u^2 }}  = 1,
+\]
+where $C =  \dfrac{T_0}{g\delta}$.
+We can integrate this to get
+\[
+C \sinh^{-1}(u) = \int_0^u \dfrac{C \, du}{\sqrt{1+u^2}} = \int_0^x \, dv = x
+\]
+So, we see $f'(x) = u = \sinh(x/C)$. This can also be integrated, too, and we get
+\[
+f(x) = \int_0^x \sinh(t/C) \, dt + c = C \cosh(x/C) + c .
+\]
+This completes the solution. Note that up to scaling each axis and a vertical shift, this curve is a catenary.
+\end{proof}
+
+%\vspace{.5cm}
+
+%\vfill
+%\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}
+As shown in Figure 1.13, Freddy Flintstone wishes to drive his car with square wheels along a strange road. How should you design the road so that his ride is perfectly smooth, i.e., so that the center of his wheel travels in a horizontal line?
+\end{exercise}
+
+\begin{proof}[Solution]
+Let $\alpha(s)$ be an arclength parametrization of the road, starting at the point $(0,-1)$.
+\[
+\alpha(s) = ( x(s), y(s) ).
+\]
+Our wheel starts with corners at $(\pm 1, \pm 1)$. Let $P$ be the point of contact with the road, $Q$ the midpoint of the side making contact with the road. Then, as vectors,
+\begin{equation}\label{flintstone-vector}
+\overrightarrow{OC} = \overrightarrow{OP} + \overrightarrow{PQ} + \overrightarrow{QC}.
+\end{equation}
+
+Note, since $\alpha$ is parametrized by arclength, so $1=||\alpha'||^2=(x')^2+(y')^2$.
+
+Also, $\overrightarrow{QP} = s\alpha'(s)$ by the ``rolling along'' setup, and $\overrightarrow{QC}$ is a unit vector orthogonal to $\overrightarrow{QP}$, so $\overrightarrow{QC} = (-y', x')$.\\
+
+If $C$ moves horizontally, we have that equation (\ref{flintstone-vector}) translates to
+\[
+(F(s), 0 ) = (x(s), y(s) ) + (-s x'(s) , -sy'(s) ) + (-y'(s), x'(s) )
+\]
+the second (vertical) component gives us
+\[
+0 = y -s y' + x' .
+\]
+Differentiating yields
+\[
+0 = -s y'' + x'' ,
+\]
+Hence $s = \dfrac{x''}{y''}$.  But $(x')^2 + (y')^2 = 1$ differentiates to $x'x'' + y' y'' = 0$, and, therefore,
+\[
+s = \dfrac{x''}{y''} = - \dfrac{y'}{x'} .
+\]
+Now, suppose that the path is a graph $y=f(x)$. We must find $f$. Since $s = - \dfrac{dy/ds}{dx/ds} = -\dfrac{dy}{dx}$. Thus we have the integro-differential equation
+\[
+f'(x) = \dfrac{dy}{dx} = -s = - \int_0^x \sqrt{1 + f'(x)^2 }\, dx, \qquad f'(0) = 0.
+\]
+This looks just like the last problem! Using what we learned there, we see that $f(x) = -\cosh(x)$, so \textbf{the road should be shaped like an upside-down catenary}. This works as long as it takes to get to the vertex, and then we need to start over\dots
+\end{proof}
+
+%\vspace{.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}
+Show that the curve $\alpha(t) = \left\{ \begin{matrix}\left(t, t \sin(\pi t)\right), & t \neq 0, \\ (0,0), & t = 0, \end{matrix} \right. $ has infinite length on $[0,1]$.
+\end{exercise}
+
+\begin{proof}[Solution]
+Consider the partition $P_N = \left\{ 0, \dfrac{1}{N}, \dfrac{2}{2N-1}, \dfrac{1}{N-1}, \dots, \dfrac{1}{2}, \dfrac{2}{3}, 1 \right\} $. The function $t\sin(\pi/ t)$ takes values $\pm t, 0, \mp t, 0, \ldots$ in sequence along this partition. We have that  the distance between our first two points is $1/N = 2/(2N)$.  Then the distance between a point with $t = \frac{1}{n}$ and the next one with $t=\frac{2}{2n-1}$ is at least as big as the difference in $x$ coordinates, which is
+\[
+\left| \dfrac{1}{n} - \dfrac{2}{2n-1}\right| = \dfrac{1}{2n^2-1} \geq \dfrac{1}{2n^2},
+\]
+and similarly the distance from $\alpha(t)$ for $t=\frac{2}{2n-1}$ to $\alpha(t)$ for $t = \frac{1}{n-1}$ is at least
+\[
+\left| \dfrac{1}{n-1} - \dfrac{2}{2n-1}\right| = \dfrac{1}{2n^2-3n-1} \geq \dfrac{1}{2n^2}.
+\]
+So we deduce that the length of this partition is
+\[
+	\ell(\alpha, P_N)  \geq \dfrac{2}{2N} + \dfrac{1}{2N^2} + \dfrac{1}{2N^2} + \dfrac{1}{2(N-1)^2} + \dfrac{1}{2(N-1)^2} + \cdots + \dfrac{1}{8} + \dfrac{1}{8}
+	\geq \sum_{k=4}^N \dfrac{1}{k}.
+\]
+
+Since this is true for any $N$, and as $N\rightarrow \infty$ this sum is unbounded, we are done.
+\end{proof}
+
+\begin{figure}[h]
+\centering
+\subfloat[Ex 11: Non-rectifiable Curve]{\includegraphics[width=0.48\textwidth]{picturebook/ch1sec1/ex1-1-11}}
+\subfloat[Ex 12: Twisted Cubic, $|t|\leq 2$]{\includegraphics[width=0.48\textwidth]{picturebook/ch1sec1/ex1-1-12a}}
+\caption{Curves for Exercises 11 and 12}
+\end{figure}
+
+\vspace{.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{exercise}
+Prove that no four distinct points on the twisted cubic lie on a plane.
+\end{exercise}
+
+\begin{proof}[Solution]
+Recall that the twisted cubic is the space curve
+\[
+\alpha(t) = (t,t^2, t^3), \qquad t \in \mathbb{R}.
+\]
+Pick four times $s,t,u,v$ in increasing order. We want to show that $\alpha(v)$ does not lie in the plane through $\alpha(s)$, $\alpha(t)$ and $\alpha(u)$. What condition might we use to check this?
+Well, $\alpha(v)$ lies in this plane exactly when $\alpha(v)-\alpha(s)$ is perpendicular to the normal defining the plane. What is the normal? One way to find it is to compute with the cross product
+\[
+\begin{split}
+n & = (\alpha(t)-\alpha(s)) \times (\alpha(u)-\alpha(s)) \\
+	& = \dots \\
+	& = (t-s)(u-s)(u-t) \Big( tu + su + st , (-1)(t + u + s) , 1 \Big) .
+\end{split}
+\]
+So, up to scaling, we may use $n = ( tu + su + st, (-1)(t+u+s), 1) $. Similarly, up to scaling,
+\[
+\alpha(v) - \alpha(s) = (1, v+s , v^2 + vs + s^2 )
+\]
+We now have that $\alpha(v)$ lies in the plane if and only if
+\[
+\begin{split}
+0 & = n \cdot (\alpha(v) - \alpha(s) ) \\
+	& = tu - vt - vu + v^2   = v^2 + (-t-u) v + tu .
+\end{split}
+\]
+This is a quadratic equation for $v$. We apply the quadratic formula to see that the roots are  $v = u$ and $v= t$. But these have been expressly disallowed since our four times are all distinct. Therefore, it is not possible to choose four distinct points on the twisted cubic which lie on a plane.
+\end{proof}
+
+%\vspace{.5cm}
+
+\vfill
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{exercise}
+Suppose that $\alpha:[a,b]\rightarrow \mathbb{R}^2$ is a smooth parametrized plane curve (perhaps not arclength-parametrized). Prove that if the chord length $||\alpha(s) - \alpha(t) ||$ depends only on $|s-t|$, then $\alpha$ must be a (subset of a) line or a circle.
+\end{exercise}
+
+\begin{proof}[Solution] We begin by writing the Taylor formula approximations for $\alpha$ and $\alpha'$ near a fixed time $t$:
+\begin{align*}
+\alpha(t+h) - \alpha(t) & = \alpha'(t) h + \dfrac{1}{2}\alpha''(t) h^2 + \mbox{h.o.t.},  \\
+\alpha'(t+h) - \alpha'(t) & = \alpha''(t) h + \dfrac{1}{2}\alpha'''(t) h^2 + \mbox{h.o.t.} .
+\end{align*}
+These are valid for all sufficiently small $h$ as long as $\alpha$ is $\mathcal{C}^3$, say.
+By assumption, we now have that
+\[
+\begin{split}
+0 = &  \dfrac{1}{2} \dfrac{d}{dt}\left|\left| \alpha(t+h) -\alpha(t) \right|\right|^2 \\
+	& = \left( \alpha(t+h) - \alpha(t) \right) \cdot \left( \alpha'(t+h) - \alpha'(t) \right) \\
+	& = \left( \alpha'(t) h + \dfrac{1}{2}\alpha''(t) h^2 + \mbox{h.o.t.} \right) \cdot \left( \alpha''(t) h + \dfrac{1}{2}\alpha'''(t) h^2 + \mbox{h.o.t.} \right) \\
+	& = (\alpha'(t)\cdot \alpha''(t) ) h^2 + ( \alpha''(t)\cdot \alpha''(t) + \alpha'(t) \cdot \alpha'''(t) ) h^3 + \mbox{h.o.t.} .
+\end{split}
+\]
+Since this holds for all $h$ sufficiently small, we deduce that $\alpha' \cdot \alpha'' = 0$ for all $t$, and $\alpha'\cdot \alpha''' +\alpha'' \cdot \alpha''=0$ for all $t$.
+The first of these equations means that $\alpha'$ and $\alpha''$ are always orthogonal, and moreover that $||\alpha'||$ is a constant. Thus, $\alpha$ is constant speed.
+
+Our next goal is to show that $||\alpha''||$ is constant.
+\dots \todo[inline]{figure this lemma out}
+Therefore, $||\alpha''||$ is constant.
+
+Note that if $||\alpha''|| = 0$, then $\alpha''=0$ everywhere, so $\alpha'$ is constant. This implies that $\alpha$ is a line: $\alpha(t) = v+ t w$.
+
+So, suppose that $||\alpha''||\neq 0$. Since $\alpha'' \neq 0$, we deduce that $\{ \alpha'(t), \alpha''(t) \}$ is always a basis of the plane.
+By one of the equations from our original derivation above, we can write the next constant two ways:
+\[
+z = \dfrac{\alpha'\cdot \alpha'}{\alpha''\cdot\alpha''} = - \dfrac{\alpha'\cdot \alpha'}{\alpha' \cdot \alpha'''} .
+\]
+Now consider the point $P$ defined by $ P = \alpha(t) + z \alpha''(t)$. We shall now check that this is indeed a point, that it, it does not move.
+We compute
+\begin{align*}
+P'  & = \alpha' + z \alpha''' \\
+P \cdot \alpha'& = \alpha' \cdot \alpha' + z \alpha' \cdot \alpha''' = \alpha' \cdot \alpha' + \left( - \dfrac{\alpha'\cdot \alpha'}{\alpha' \cdot \alpha'''} \right) \alpha' \cdot \alpha''' = 0 \\
+P \cdot \alpha'' &  = \alpha' \cdot \alpha'' + z \alpha'''\cdot \alpha'' = 0
+\end{align*}
+This means that $P$ is stationary, hence really is a point. Now, we clearly have that $||\alpha(t) - P ||^2 = z^2 \alpha'' \cdot \alpha'' $ is a constant. That means, of course, that $\alpha$ lies on a circle about $P$.
+\end{proof}
+
+
+\vfill
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
