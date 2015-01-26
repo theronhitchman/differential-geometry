@@ -1,2 +1,10 @@
+# sage files
 *.sage-chat
 *.sage-backup
+
+# latex files
+*.aux
+*.log
+*.out
+*.gz
+*.pdf
