@@ -4,10 +4,10 @@
 \begin{document}
 
 
-\section{Examples, Arclength Parametrization}
+\section{Examples, Arclength Parameterization}
 
 \begin{exercise}
-Parametrize the unit circle (less the point $(-1,0)$)  by the signed length $t$ of the vertical line segment joining the origin to the chord from $(-1,0)$ to the point on the circle.
+Parameterize the unit circle (less the point $(-1,0)$)  by the signed length $t$ of the vertical line segment joining the origin to the chord from $(-1,0)$ to the point on the circle.
 \end{exercise}
 
 \begin{proof}[Solution]
@@ -62,12 +62,12 @@ $||\alpha'(t)||$ and reparametrize $\alpha$ by arclength.
 \[
 ||\alpha'(t)|| = [ (-a\sin t)^2 + (a \cos t)^2 + b^2]^{1/2} = [a^2+b^2]^{1/2}
 \]
-So $\alpha$ has constant speed. This makes reparametrizing a snap. We use the function
+So $\alpha$ has constant speed. This makes reparameterizing a snap. We use the function
 \[
 t = h(s) = \dfrac{s}{\sqrt{a^2 + b^2 \ }}.
 \]
 Now $\beta(s) = \alpha \circ h(s) = \alpha(h(s))$ has $||\beta'(s)|| = ||\alpha'(t)||\cdot |h'(s)| = 1$.
-We conclude that an arclength reparametrization of the curve is
+We conclude that an arclength reparameterization of the curve is
 \[
 \beta(s) = \left( a \cos \left(\dfrac{s}{\sqrt{a^2 + b^2 \ }}\right) , a \sin\left( \dfrac{s}{\sqrt{a^2 + b^2 \ }}\right) , \dfrac{b \cdot s}{\sqrt{a^2 + b^2 \ }} \right).
 \]
@@ -88,7 +88,7 @@ We conclude that an arclength reparametrization of the curve is
 
 \begin{exercise} Let
 $\alpha (t) = \left( \dfrac{1}{\sqrt{3}} \cos t + \dfrac{1}{\sqrt{2}}\sin t , \dfrac{1}{\sqrt{3}}\cos t , \dfrac{1}{\sqrt{3}}\cos t - \dfrac{1}{\sqrt{2}}\sin t \right)$.
-Calculate $\alpha'(t)$, $|| \alpha'(t)||$, and reparametrize $\alpha$ by arclength.
+Calculate $\alpha'(t)$, $|| \alpha'(t)||$, and reparameterize $\alpha$ by arclength.
 \end{exercise}
 
 \begin{proof}[Solution]
@@ -103,7 +103,7 @@ So then
 \[
 ||\alpha'(t)||^2 = \left( -\dfrac{1}{\sqrt{3}}\sin t + \dfrac{1}{\sqrt{2}}\cos t \right)^2 + \left( - \dfrac{1}{\sqrt{3}} \sin t \right)^2 + \left( -\dfrac{1}{\sqrt{3}}\sin t - \dfrac{1}{\sqrt{2}}\cos t \right)^2 = 1 .
 \]
-So we see that $\alpha$ is already a unit speed curve, and no reparametrization is necessary.
+So we see that $\alpha$ is already a unit speed curve, and no reparameterization is necessary.
 \end{proof}
 
 %\vspace{.5cm}
@@ -119,7 +119,7 @@ Parametrize the graph $y=f(x)$, $a\leq x \leq b$, and show that its arclength is
 \end{exercise}
 
 \begin{proof}[Solution]
-We parametrize the graph by
+We parameterize the graph by
 \[
 x = t, \quad y = f(t), \quad a \leq t \leq b .
 \]
@@ -144,7 +144,7 @@ So the claim follows directly from the definition of arclength.
 \begin{itemize}
 \item[a.] Show that the arclength of the catenary $\alpha(t) = (t, \cosh t)$ for $0\leq t\leq b$ is $\sinh b$.
 
-\item[b.] Reparametrize the catenary by arclength.
+\item[b.] Reparameterize the catenary by arclength.
 \end{itemize}
 \end{exercise}
 
@@ -165,7 +165,7 @@ e^t  = \dfrac{2s \pm \sqrt{4s^2 - 4(1)(-1)} }{2(1)} = s \pm \sqrt{s^2+1} .
 \]
 We choose the positive branch to fit our situation, and then invert the exponential.
 \[ t = h(s) = \ln(  s + \sqrt{s^2+1} ) . \]
-So, after some computation, we see that the reparametrization of $\alpha$ by arclength is the curve
+So, after some computation, we see that the reparameterization of $\alpha$ by arclength is the curve
 \[
 \beta(s) = \alpha\circ h(s) = \left(  s + \sqrt{s^2+1}\, , \,
 \dfrac{s^2+1 + s\sqrt{s^2+1 } }{ s + \sqrt{s^2+1 } }\, \right).
@@ -187,7 +187,7 @@ So, after some computation, we see that the reparametrization of $\alpha$ by arc
 
 
 \begin{exercise}
-Consider the curve $\alpha(t) = \left( e^t , e^{-t} , \sqrt{2\,} t \right)$. Calculate $\alpha'(t)$, $||\alpha'(t)||$ , and reparametrize $\alpha$ by arclength, starting at $t=0$.
+Consider the curve $\alpha(t) = \left( e^t , e^{-t} , \sqrt{2\,} t \right)$. Calculate $\alpha'(t)$, $||\alpha'(t)||$ , and reparameterize $\alpha$ by arclength, starting at $t=0$.
 \end{exercise}
 
 \begin{proof}[Solution]
@@ -206,7 +206,7 @@ Using a little of what we did in the last exercise, we see that
 \[
 t = h(s) = \ln\left( \dfrac{s}{2} + \sqrt{\left(\dfrac{s}{2}\right)^2 + 1 } \right)
 \]
-is our ``time change'' function, and our reparametrized curve is
+is our ``time change'' function, and our reparameterized curve is
 \[
 \beta(s) = \alpha\circ h(s) = \left(
  \dfrac{s}{2} + \sqrt{\left(\dfrac{s}{2}\right)^2 + 1 } \, ,
@@ -269,7 +269,7 @@ Now we can compute the arclength:
 
 
 \begin{exercise}
-Let $P, Q \in \mathbb{R}^3$ and let $\alpha: [a,b] \rightarrow \mathbb{R}^3$ be any parametrized curve with $\alpha(a) = P$ and $\alpha(b) = Q$. Let $v= Q-P$. Prove that $\text{length}(\alpha) \geq ||v||$, so that the line segment from $P$ to $Q$ gives the shortest possible path.
+Let $P, Q \in \mathbb{R}^3$ and let $\alpha: [a,b] \rightarrow \mathbb{R}^3$ be any parameterized curve with $\alpha(a) = P$ and $\alpha(b) = Q$. Let $v= Q-P$. Prove that $\text{length}(\alpha) \geq ||v||$, so that the line segment from $P$ to $Q$ gives the shortest possible path.
 \end{exercise}
 
 \begin{proof}[Solution]
@@ -349,7 +349,7 @@ As shown in Figure 1.13, Freddy Flintstone wishes to drive his car with square w
 \end{exercise}
 
 \begin{proof}[Solution]
-Let $\alpha(s)$ be an arclength parametrization of the road, starting at the point $(0,-1)$.
+Let $\alpha(s)$ be an arclength parameterization of the road, starting at the point $(0,-1)$.
 \[
 \alpha(s) = ( x(s), y(s) ).
 \]
@@ -358,7 +358,7 @@ Our wheel starts with corners at $(\pm 1, \pm 1)$. Let $P$ be the point of conta
 \overrightarrow{OC} = \overrightarrow{OP} + \overrightarrow{PQ} + \overrightarrow{QC}.
 \end{equation}
 
-Note, since $\alpha$ is parametrized by arclength, so $1=||\alpha'||^2=(x')^2+(y')^2$.
+Note, since $\alpha$ is parameterized by arclength, so $1=||\alpha'||^2=(x')^2+(y')^2$.
 
 Also, $\overrightarrow{QP} = s\alpha'(s)$ by the ``rolling along'' setup, and $\overrightarrow{QC}$ is a unit vector orthogonal to $\overrightarrow{QP}$, so $\overrightarrow{QC} = (-y', x')$.\\
 
