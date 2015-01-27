@@ -33,7 +33,7 @@ title:  UNI Math 3630/5630 <br class="visible-xs" /><i>Differential Geometry</i>
     <div>
       <h2>Journal</h2>
       <p>
-        Published issues of <i>Geometria Lenis</i>, our class journal, with your finished work.
+        Published issues of <i>Geometria Lenis</i>, our class journal, with your finished work on regular class tasks.
       </p>
       <div>
         <br />
