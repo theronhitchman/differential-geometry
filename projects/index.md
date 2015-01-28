@@ -15,6 +15,7 @@ of various types that allow you to do go deeper into special parts of the subjec
    Choose an article from an expository journal which addresses some topic in
    classical differential geometry of curves or surfaces. Appropriate
    journals include:
+   
      * The American Mathematical Monthly
      * The Mathematical Intelligencer
      * The College Mathematics Journal
@@ -52,30 +53,3 @@ The Gauss-Bonnet Theorem, Minimal surfaces, calculus of variations and geodesics
 ---
 
 There are so many topics, that you can easily find a whole bunch more. This is just a list I made up in an afternoon of thinking.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
