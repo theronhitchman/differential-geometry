@@ -51,7 +51,7 @@ title:  UNI Math 3630/5630 <br class="visible-xs" /><i>Differential Geometry</i>
       </p>
       <div>
         <br />
-        <a class="btn btn-success btn-lg btn-block" href="{{ site.baseurl }}/tasks/">Tasks</a>
+        <a class="btn btn-success btn-lg btn-block" href="{{ site.baseurl }}/projects/">Projects</a>
       </div>
     </div>
   </div>
