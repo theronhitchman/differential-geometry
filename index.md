@@ -22,6 +22,7 @@ title:  UNI Math 3630/5630 <br class="visible-xs" /><i>Differential Geometry</i>
         Prof. Hitchman's daily log of class activities, with notes on your
         successes and new questions.
       </p>
+      <img class="img-responsive" alt-text="Folium of Descartes" src="{{site.baseurl}}/images/descartes.png">
       <div>
         <br />
         <a class="btn btn-info btn-lg btn-block" href="{{ site.baseurl }}/blog/">Blog</a>
@@ -35,6 +36,7 @@ title:  UNI Math 3630/5630 <br class="visible-xs" /><i>Differential Geometry</i>
       <p>
         Published issues of <i>Geometria Lenis</i>, our class journal, with your finished work on regular class tasks.
       </p>
+            <img class="img-responsive" alt-text="Viviani curve" src="{{site.baseurl}}/images/viviani.jpg">
       <div>
         <br />
         <a class="btn btn-warning btn-lg btn-block" href="{{ site.baseurl }}/journal/">Journal</a>
@@ -49,6 +51,7 @@ title:  UNI Math 3630/5630 <br class="visible-xs" /><i>Differential Geometry</i>
       <p>
         Ideas for various types of class projects on curves and surfaces in a variety of styles.
       </p>
+            <img class="img-responsive" alt-text="A ruled surface" src="{{site.baseurl}}/images/ruled-surface-view1.jpg">
       <div>
         <br />
         <a class="btn btn-success btn-lg btn-block" href="{{ site.baseurl }}/projects/">Projects</a>
