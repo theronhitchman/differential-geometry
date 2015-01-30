@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Parametrized Curves 1
+title: Parameterized Curves 1
 ---
 
-We first talked a litle bit about "leveling up," and about how to read mathematics
+We first talked a little bit about "leveling up," and about how to read mathematics
 effectively (use a pen; work along; do extra examples by yourself; reread multiple times).
 
 Then students presented. Christine took up Task 1. Sladana handled Shifrin 1.1.1.
