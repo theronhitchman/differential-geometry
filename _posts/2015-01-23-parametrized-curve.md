@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Parametrized Curves 2
+title: Parameterized Curves 2
 ---
 
-We made some more progress today on parametrized curves.
+We made some more progress today on parameterized curves.
 
 Jesse M finished his work on Shifrin 1.1.5. Emily did Shifrin 1.1.2, and Corbyn
 did Shifrin 1.1.7.
 
-This involved a few discussions about what is really going on with reparametrizing 
+This involved a few discussions about what is really going on with reparameterizing
 a curve by arclength.
 
 ### Some Resources
