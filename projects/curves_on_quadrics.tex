@@ -1,0 +1,44 @@
+\documentclass[12pt]{amsart}
+\usepackage{paralist}
+\usepackage{fullpage}
+
+\theoremstyle{plain}
+\newtheorem*{theorem}{Theorem}
+
+\begin{document}
+\title{Curves on Quadric Surfaces Project}
+\author{Differential Geometry, Spring 2015}
+
+\maketitle
+
+\section*{Central Theme}
+
+There is a nice characterization (in terms of an ordinary differential equation) of when a space curve lies on some sphere. Can this be extended to the other classical quadric surfaces?
+
+\section*{Minimum Requirements}
+
+Write a paper exploring the basics of the curves lying on quadric surfaces. 
+\begin{compactitem}
+\item 7-10 pages, in \LaTeX, with attention paid to standard English grammar, spelling and usage.
+\item Include images where appropriate.
+\item Prove the theorem below.
+\item Find analogs of these theorems for other quadric surfaces and prove them.
+\item Include examples as appropriate. You might consider simple things like lines (for the hyperbolic paraboloid or the plane), and more complicated things like loxodromes or spherical helices on spheres.
+\end{compactitem}
+
+\begin{theorem} [Shifrin 1.2.18]
+Let $\alpha$ be a unit-speed curve with non-vanishing curvature, $\kappa$, and torsion, $\tau$. Then there exists a sphere on which $\alpha$ lies if and only if
+\[
+\dfrac{\tau}{\kappa} + \left( \dfrac{1}{\tau} \left( \dfrac{1}{\kappa}\right)'\right)' = 0.
+\]
+\end{theorem}
+
+\section*{Extensions to Explore}
+
+How do the theorems you have found blend together? Is there a way to understand how the conditions change as you change the parameters which help define a family of quadric surfaces?
+
+\section*{Resources}
+
+There is a short discussion of the spherical case in Struik on page 32. There is related discussion in Shifrin in exercises $\S$1.2\#9(a) and $\S$1.2.24(c).
+
+\end{document}
