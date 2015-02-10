@@ -17,6 +17,10 @@ There are three types of credit-bearing work in this course:
 For more about the projects, please see the [projects page]({{site.baseurl}}/projects/).
 For details about writing up solutions for the class journal, see the [writing page]({{site.baseurl}}/writing/)
 
+#### Competency Exam Specifications
+
+* [the curves computational exam description]({{site.baseurl}}/assessment/curves_exam.html)
+
 ### The grading table for undergraduates
 
 Final grades will be assigned according to the following table:
