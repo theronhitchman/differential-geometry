@@ -1,6 +1,9 @@
-\documentclass[12pt]{amsart}
+\documentclass[11pt]{amsart}
 \usepackage{paralist}
 \usepackage{fullpage}
+
+\theoremstyle{plain}
+\newtheorem*{theorem}{Theorem}
 
 \begin{document}
 \title{Locus of Centers Project}
@@ -10,21 +13,53 @@
 
 \section*{Central Theme}
 
+For a given point on a space curve, it is possible to find the center of the osculating 
+circle, which is sometimes called the \emph{center of curvature} for that point. As we 
+move along the curve, these centers of curvature trace out a new curve, called the 
+\emph{locus of centers of curvature}. The structure of the locus of centers can tell us 
+things about the geometry of our original curve.
+
 \section*{Minimum Requirements}
 
 Write a paper exploring the basics of the locus of centers of a space curve.
 \begin{compactitem}
 \item 7-10 pages, in \LaTeX, with attention paid to standard English grammar, spelling and usage.
-\item Give a clear definition of the .
+\item Give a clear definition of the locus of centers of curvature.
 \item Compute several examples, including at least these: a line, a circle, a circular helix, Viviani's curve (Struik example (3) on pages 9--10), the twisted cubic (Shifrin page 3).
 \item Include images where appropriate.
+\item Find and prove ways in which the Frenet-Serret apparatus $\{ T, N, B, \kappa, \tau\}$ for the locus of centers is related to that for the original curve.
 \item Prove the theorems below.
+\item Weave everything into a coherent narrative.
 \end{compactitem}
 
+\begin{theorem} [Struik 1-6.5]
+The tangents to a curve and its locus of centers at corresponding points are normal to each other.
+\end{theorem}
+
+\begin{theorem} [Struik 1-6.6]
+The locus of centers of a circular helix is a coaxial helix of equal pitch.
+\end{theorem}
+
+\begin{theorem} [Struik 1-6.7]
+Let $\alpha$ be a circular helix and $\beta$ its locus of centers. Let $\gamma$ be the locus of centers of $\beta$. Show that $\gamma$ is the original helix again. Furthermore, show that the product of the torisions at corresponding points of the helix and the its locus of centers is equal to the square of the curvature of the helix.
+\end{theorem}
+
+\begin{theorem} [Struik 1-11.10]
+Let $\alpha$ be a plane curve and $\beta$ its locus of curvatures. Then the tangents to $\beta$ are parallel to the principal normals to $\alpha$.
+\end{theorem}
+
+\begin{theorem} [Struik 1-11.10]
+Let $\alpha$ be a plane curve and $\beta$ its locus of curvatures. The arclength of a segment of $\beta$ is equal to the difference of the radii of curvature of $\alpha$ at the corresponding points.
+\end{theorem}
 
 \section*{Extensions to Explore}
 
+Is there a way to characterize the collection of curves $\alpha$ such that $\alpha$ and its locus of centers are congruent by a rigid motion?
+
+What about doing the construction twice (like for a circular helix)? Is a circular helix the only way to do the passage to the locus of centers twice and get a curve congruent to the original?
 
 \section*{Resources}
+
+There is discussion of the locus of centers in Struik $\S$1-4. Then exercises in $\S$1-6 \#5-7, $\S$1-11 \#10.
 
 \end{document}
