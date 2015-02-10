@@ -8,6 +8,22 @@ Differential Geometry gives us lots of opportunity for further study on special
 topics. Depending on which grade you are aiming for, you will complete projects
 of various types that allow you to do go deeper into special parts of the subject.
 
+
+## First Project Descriptions
+
+1. [The Tangent Spherical Image]({{site.baseurl}}/projects/sphere_image.pdf) --- Emily
+2. [Pedal Curves]({{site.baseurl}}/projects/pedal_curves.pdf) --- Gustavo
+3. [The Darboux Vector]({{site.baseurl}}/projects/darboux_vect.pdf) --- Corbyn
+4. [Curves on Quadrics]({{site.baseurl}}/projects/curves_on_quadrics.pdf) --- Mark
+5. [Bishop's Relatively Parallel Framings]({{site.baseurl}}/projects/bishop_frame.pdf) --- Sladana
+6. [Bertrand Mates]({{site.baseurl}}/projects/bertrand_curve.pdf) --- Christine
+7. [The Locus of Centers]({{site.baseurl}}/projects/locus_centers.pdf) --- Jesse T.
+8. [Total Curvature and Knots]({{site.baseurl}}/projects/total_curve_knots.pdf) --- Jesse M.
+9. The Four Vertex Theorem and its converse --- TJ
+
+
+----
+
 ## Styles of Projects
 
 1. A Literature Research Project
@@ -44,10 +60,10 @@ list to help you get started looking for ideas.
 #### Curves
 
 Bertrand Mates, Which way did the bicycle go?, contact between curves, involutes
-and evolutes, the isoperimetric problem, spherical images, Fenchel and Fary-Milnor
+and evolutes, the isoperimetric problem, spherical images, Fenchel and Fáry-Milnor
 theorems, other connections to knot theory, the Cauchy-Crofton formula, Hopf's
 Umlaufsatz, Ovals and the four vertex theorem, planes curves of constant width,
-the Darboux vector, pedal curves, the Bishop framing
+the Darboux vector, pedal curves, the Bishop framing.
 
 #### Surfaces
 
