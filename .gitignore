@@ -8,3 +8,7 @@
 *.out
 *.gz
 *.pdf
+*.toc
+
+# mac osx
+.DS_Store
