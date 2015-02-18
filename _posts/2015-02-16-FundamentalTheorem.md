@@ -15,8 +15,8 @@ determine the curve, up to some rigid motion of Euclidean space.
 I briefly introduced the ideas of involutes and evolutes. I want to talk about those
 some more this week. I wrote about those a few years ago. Here are some links:
 
-[http://theronhitchman.blogspot.com/2013/02/involutes.html]()
-[http://theronhitchman.blogspot.com/2013/03/evolutes.html]()
+[http://theronhitchman.blogspot.com/2013/02/involutes.html](http://theronhitchman.blogspot.com/2013/02/involutes.html)
+[http://theronhitchman.blogspot.com/2013/03/evolutes.html](http://theronhitchman.blogspot.com/2013/03/evolutes.html)
 
 It looks like the 3d plotting from those Sage cells is off. I will think about that.
 
