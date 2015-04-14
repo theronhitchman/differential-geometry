@@ -30,7 +30,6 @@ Then I talked a lot about how the theory fits together. There were two main poin
     the tangential and normal components of the motion of N and B.)
     And finally then we derived some compatibility relations called the
     Frenet-Serret equations which come from looking at deeper derivatives.
-
     For surfaces, the tangent vector is replaced by the pair \\(x_u, x_v\\). That is the
     tangent information (given by first derivatives). Things are more complicated
     because there are two vectors. Rather than normalize by arclength, all we can do
