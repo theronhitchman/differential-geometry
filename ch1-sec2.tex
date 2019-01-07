@@ -103,7 +103,7 @@ Calculate the Frenet apparatus $(T,\kappa, N, B, \tau)$ of the following curves:
 \dfrac{s}{\sqrt{2}} \right) $,
 \item[b.] $\alpha(t) = \left( \dfrac{ e^t}{2} (\sin t + \cos t) ,  
 \dfrac{ e^t}{2} (\sin t - \cos t) , e^t \right) $,
-\item[c.] $ \alpha(t) = ( \sqrt{1 + t^2} , t , \ln(t + \sqrt{1+t^2} )$ ,
+\item[c.] $ \alpha(t) = ( \sqrt{1 + t^2} , t , \ln(t + \sqrt{1+t^2}) )$ ,
 \item[d.] $\alpha(t) = ( e^t \cos t , e^t \sin t, e^t )$,
 \item[e.] $\alpha(t) = (\cosh t, \sinh t, t )$,
 \item[f.] $ \alpha(t) = (t , t^2/2 , t\sqrt{1+t^2} + \ln( t + \sqrt{1+t^2})  )$,
@@ -1101,7 +1101,7 @@ So the speed of $\beta$ satisfies
 \item[b.] The angle between (unit) tangent vectors is the number $\theta$ so that 
 $\cos\theta = T_{\alpha}\cdot T_{\beta}$, so this follows from the observation that
 \[
-\left( T_{\alpha} \cdot T_{\beta} \right)' = T_{\alpha} (\kappa_{\beta}N_{\beta}) 
+\left( T_{\alpha} \cdot T_{\beta} \right)' = T_{\alpha} \cdot(\upsilon_{\beta}\kappa_{\beta}N_{\beta}) 
 + (\kappa_{\alpha} N_{\alpha}) \cdot T_{\beta} = 0 ,
 \]
 since the normal lines of the two curves coincide.
@@ -1172,7 +1172,7 @@ This implies that $\kappa$ is a constant, and hence $\tau$ is a constant, too.
 Thus $\alpha$ is a circular helix.
 
 Now, if $\alpha$ is a circular helix, we know that $\kappa$ and $\tau$ are constants, 
-and there is another constant $c$ so that $\tau = a\kappa$. We may now find 
+and there is another constant $a$ so that $\tau = a\kappa$. We may now find 
 infinitely many solutions $(r,c)$ to the equation
 \[
 1 = r\kappa + c\tau = (r+ca) \kappa
@@ -1229,7 +1229,7 @@ Show that the curve $\alpha$ has a Bertrand mate.
 
 \end{proof}
 
-\vspace{.5cm}
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1247,14 +1247,14 @@ How many such parallel curves are there?
 \end{itemize}
 \end{exercise}
 
-\begin{proof}[Solution]
+\begin{proof}[Solution] One part at a time\dots
 \begin{itemize}
 \item[a.] We start with the plane curve. Let $s$ be the arclength parameter 
 of $\alpha$. Note that $\upsilon_{\beta} T_{\beta} = \dfrac{d\beta}{ds} = 
 T_{\alpha} + \varepsilon ( -\kappa_{\alpha} T_{\alpha} ) = 
 (1-\varepsilon\kappa_{\alpha}) T_{\alpha}$, so the curves have parallel tangent 
 vectors and the speed of $\beta$ with respect to $s$ is $\upsilon_{\beta}(s) = 
-|1-\varepsilon\kappa_{\alpha} |$. If the tangent vectors are parallel, we must 
+|1-\varepsilon\kappa_{\alpha}(s) |$. If the tangent vectors are parallel, we must 
 have $T_{\beta} = T_{\alpha}$. Now to find the curvature, we differentiate
 \[
 \upsilon_{\beta} \kappa_{\beta} N_{\beta} = \dfrac{d}{ds} T_{\beta} = T_{\alpha}' 
@@ -1272,10 +1272,13 @@ in the statement. Differentiating the defining equation for $\beta$ we find
 \[
 \begin{split}
 \dfrac{d\beta}{ds} & = T_{\alpha} 
- + \varepsilon\left( -\sin(\theta) \theta' N + \cos(\theta) (-\kappa T + \tau B) 
-  + \cos(\theta) \theta' B + \sin(\theta) ( -\tau N) \right) \\
-& = (1-\varepsilon\kappa\cos(\theta)) T - \varepsilon\sin(\theta) (\theta' + \tau) N 
- + \varepsilon\cos(\theta) ( \tau + \theta') B .
+ + \varepsilon( -\sin(\theta) \theta') N_{\alpha} 
+ + \varepsilon\cos(\theta) (-\kappa T_{\alpha} + \tau B_{\alpha}) \\
+& \qquad  + \varepsilon\cos(\theta) \theta' B_{\alpha} 
+ + \varepsilon\sin(\theta) ( -\tau N_{\alpha})  \\
+& = (1-\varepsilon\kappa\cos(\theta)) T_{\alpha} 
+ - \varepsilon\sin(\theta) (\theta' + \tau) N_{\alpha} 
+ + \varepsilon\cos(\theta) ( \tau + \theta') B_{\alpha} .
 \end{split}
 \]
 So our curve $\beta$ will be parallel to $\alpha$ when $\theta' + \tau = 0$, that is, 
@@ -1283,6 +1286,8 @@ when $\theta(s) = -\int_{s_0}^s \tau(u) \, du$. There is a whole one parameter f
 of these curves corresponding to the choice of starting point $s_0$. Since this is like 
 a phase shift in the trig functions, we essentially get a circle's worth of parallel 
 curves.
+
+\clearpage
 
 \item[c.] The arclength parametrized helix is
 \[
@@ -1296,11 +1301,12 @@ then
 \]
 Following the above, then we see
 \[
-\beta(s) = \left( a \cos(s/c) +\varepsilon\left[ -\cos(bs/c^2)\cos(s/c) 
-  - \dfrac{b}{c}\sin(bs/c^2)\sin(s/c)\right] ,
-	a \sin(s/c) +\varepsilon \left[ \cos(bs/c^2)\sin(s/c) 
-	+ \dfrac{b}{c}\sin(bs/c^2)\cos(s/c)\right] ,
-	\dfrac{bs}{c} - \varepsilon\dfrac{a}{c}\sin(bs/c^2)  \right) .
+\begin{split}
+\beta(s) = & \left(  a \cos(s/c) +\varepsilon\left[ -\cos(bs/c^2)\cos(s/c) 
+  - \dfrac{b}{c}\sin(bs/c^2)\sin(s/c)\right] , \right. \\
+& \qquad a \sin(s/c) +\varepsilon \left[ \cos(bs/c^2)\sin(s/c) + \dfrac{b}{c}\sin(bs/c^2)\cos(s/c)\right] , \\
+& \qquad \left. \dfrac{bs}{c} - \varepsilon\dfrac{a}{c}\sin(bs/c^2)  \right) .
+\end{split}
 \]
 The helix goes around one turn as $s$ runs from $0$ to $2\pi c = 2\pi\sqrt{a^2+b^2}$. 
 The parallel curve $\beta$ spins around this curve and goes around it one full turn 
@@ -1311,8 +1317,7 @@ in the normal plane as $s$ runs from $0$ to $2\pi\sqrt{a^2+b^2}/b$.
 \end{itemize}
 \end{proof}
 
-\vspace{.5cm}
-
+\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{exercise}
