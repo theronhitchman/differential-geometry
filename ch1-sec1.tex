@@ -630,15 +630,16 @@ $||\alpha(s) - \alpha(t) ||$ depends only on $|s-t|$, then $\alpha$ must be a (s
 line or a circle.
 \end{exercise}
 
-\begin{proof}[Solution] We begin by using Taylor's Theorem for $\alpha$ 
-and $\alpha'$ near a fixed time $t$:
+\begin{proof}[Solution] We begin by using Taylor's Theorem on $\alpha$ 
+and $\alpha'$ near a fixed $t$:
 \begin{align*}
-\alpha(t+h) - \alpha(t) & = \alpha'(t) h + \dfrac{1}{2}\alpha''(t) h^2 + \rho_1,  \\
+\alpha(t+h) - \alpha(t) & = \alpha'(t) h + \dfrac{1}{2}\alpha''(t) h^2 + 
+ \dfrac{1}{6}\alpha'''(t) h^3  +  \rho_1,  \\
 \alpha'(t+h) - \alpha'(t) & = \alpha''(t) h + \dfrac{1}{2}\alpha'''(t) h^2 + \rho_2,
 \end{align*}
 where $\rho_1$ and $\rho_2$ are quantities that satisfy
 \[
-\lim_{h\rightarrow 0} \dfrac{\rho_1}{h^3} = \lim_{h\rightarrow 0} \dfrac{\rho_2}{h^3} = 0.
+\lim_{h\rightarrow 0} \dfrac{\rho_1}{h^3} = \lim_{h\rightarrow 0} \dfrac{\rho_2}{h^2} = 0.
 \]
 These are valid for all sufficiently small $h$ as long as $\alpha$ is $\mathcal{C}^3$, say.
 By assumption, we now have that
@@ -649,32 +650,68 @@ By assumption, we now have that
 	& = 2\left( \alpha'(t) h + \dfrac{1}{2}\alpha''(t) h^2 + \rho_1 \right) 
 	\cdot \left( \alpha''(t) h + \dfrac{1}{2}\alpha'''(t) h^2 + \rho_2 \right) \\
 	& = 2(\alpha'(t)\cdot \alpha''(t) ) h^2 + ( \alpha''(t)\cdot \alpha''(t) + \alpha'(t) 
-	\cdot \alpha'''(t) ) h^3 + \sigma,
+	\cdot \alpha'''(t) ) h^3 + \sigma_1,
 \end{split}
 \]
-where $\sigma$ is a function that decays at least as fast as $h^4$ as $h\rightarrow 0$.
+where $\sigma_1$ is a function that decays at least as fast as $h^4$ as $h\rightarrow 0$.
 
 Since this holds for all $h$ sufficiently small, we can first divide by $h^2$ and then take
 the limit as $h$ goes to zero to
-deduce that $\alpha' \cdot \alpha'' = 0$ 
-for all $t$. 
-
+deduce that 
+\begin{equation}\label{eq:14-1}
+\alpha' \cdot \alpha'' = 0  \quad \text{for all $t$}. 
+\end{equation} 
 With that in hand, we can then divide through by $h^3$ and take a limit as $h$ goes to zero
-to learn that $\alpha'\cdot \alpha''' +\alpha'' \cdot \alpha''=0$ for all $t$.
-The first of these equations means that $\alpha'$ and $\alpha''$ are always orthogonal. Also 
-since $\frac{d}{dt}(\alpha'\cdot\alpha') = 2\alpha'\cdot\alpha''=0$, we get that $||\alpha'||$ is 
-a constant. Thus, $\alpha$ is constant speed.
+to learn that 
+\begin{equation}\label{eq:14-2}
+\alpha'\cdot \alpha''' +\alpha'' \cdot \alpha''=0 \quad \text{for all $t$}.
+\end{equation}
+Equation (\ref{eq:14-1}) means that $\alpha'$ and $\alpha''$ are always orthogonal. 
+Also since $\frac{d}{dt}(\alpha'\cdot\alpha') = 2\alpha'\cdot\alpha''=0$, 
+we get that $||\alpha'||$ is a constant. Thus, $\alpha$ is a constant speed 
+parametrized curve.\\
 
-Our next goal is to show that $||\alpha''||$ is constant.
-\dots \todo[inline]{figure this lemma out}
-Therefore, $||\alpha''||$ is constant.
+Our next goal is to show that $||\alpha''||$ is constant. This will take 
+a little more work, so be prepared. Using the Taylor
+approximation for $\alpha$ directly, we have
+\[
+\begin{split}
+||\alpha(t+h) &-\alpha(t)||^2  = (\alpha(t+h)-\alpha(t)) \cdot (\alpha(t+h)-\alpha(t)) \\
+ & = (\alpha'(t) h + \dfrac{1}{2}\alpha''(t) h^2 + 
+   \dfrac{1}{6}\alpha'''(t) h^3 + \rho_1)
+   \cdot(\alpha'(t) h + \dfrac{1}{2}\alpha''(t) h^2 + 
+   \dfrac{1}{6}\alpha'''(t) h^3 + \rho_1)\\
+& = \alpha'(t)\cdot \alpha'(t) h^2 + \alpha'(t)\cdot\alpha''(t) h^3 +
+   \left( \dfrac{1}{3} \alpha'(t)\cdot\alpha'''(t) + 
+   \dfrac{1}{4}\alpha''(t)\cdot \alpha''(t) \right) h^4 + \sigma_2
+\end{split}
+\]
+By Equation (\ref{eq:14-1}), the $h^3$ term vanishes. 
+We can also use Equation (\ref{eq:14-2}) to simplify the $h^4$ term. Doing so, we
+get
+\[
+||\alpha(t+h) -\alpha(t)||^2 = \alpha'(t)\cdot \alpha'(t) h^2 
+  -\dfrac{1}{12}\alpha''(t)\cdot\alpha''(t) h^4 + \sigma_2
+\]
+Now we are ready! By hypothesis, this quantity does not depend upon $t$, but only on $h$.
+So if we fix a value of $h$ and take a derivative with respect to $t$, we get
+\[
+\begin{split}
+0  & = \dfrac{\partial}{\partial t}\left|\left| \alpha(t+h) -\alpha(t) \right|\right|^2 \\
+  & = 2\alpha'(t)\cdot \alpha''(t) h^2 - \dfrac{1}{6}\alpha''(t)\cdot\alpha'''(t)h^4 + \sigma_3
+\end{split}
+\]
+Recall that we already know the first term on the right vanishes by Equation (\ref{eq:14-1}).
+And if we argue as above, we can deduce that $\alpha'' \cdot \alpha'''$ vanishes for all
+values of $t$. That is half the derivative of $||\alpha''(t)||^2$. 
+Therefore, $||\alpha''||$ is constant.\\
 
 Note that if $||\alpha''|| = 0$, then $\alpha''=0$ everywhere, so $\alpha'$ is constant. 
 This implies that $\alpha$ is a line: $\alpha(t) = v+ t w$.
 
 So, suppose that $||\alpha''||\neq 0$. Since $\alpha'' \neq 0$, we deduce that 
 $\{ \alpha'(t), \alpha''(t) \}$ is always a basis of the plane.
-By one of the equations from our original derivation above, we can write the next constant 
+By Equation (\ref{eq:14-2}) from the first derivation above, we can write the next constant 
 two ways:
 \[
 z = \dfrac{\alpha'\cdot \alpha'}{\alpha''\cdot\alpha''} = - \dfrac{\alpha'\cdot \alpha'}
